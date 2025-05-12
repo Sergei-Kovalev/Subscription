@@ -15,5 +15,7 @@ public interface UserMapper {
     @Mapping(target = "subscriptions", ignore = true)
     User toUser(UserRequestDto userRequestDto);
 
+    @Mapping(target = "userId", ignore = true)
+    @Mapping(target = "subscriptions", ignore = true)
     void updateUser(@MappingTarget User user, UserRequestDto userRequestDto);
 }

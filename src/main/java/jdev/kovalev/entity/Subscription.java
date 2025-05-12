@@ -41,5 +41,6 @@ public class Subscription {
     @ManyToMany(mappedBy = "subscriptions", fetch = FetchType.LAZY)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @Builder.Default
     private Set<User> users = new HashSet<>();
 }

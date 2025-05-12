@@ -43,12 +43,12 @@ public class UserController {
         return new ResponseEntity<>(userService.update(id, userRequestDto), HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping(value = "/{id}", produces = "text/plain;charset=UTF-8")
     public ResponseEntity<String> delete(@UUID @PathVariable String id) {
         return new ResponseEntity<>(userService.delete(id), HttpStatus.OK);
     }
 
-    @PostMapping("/{id}/subscriptions")
+    @PostMapping(value = "/{id}/subscriptions", produces = "text/plain;charset=UTF-8")
     public ResponseEntity<String> addSubscription(@UUID @PathVariable String id,
                                                   @UUID @RequestParam String subId) {
         return new ResponseEntity<>(userService.addSubscription(id, subId), HttpStatus.OK);
@@ -59,7 +59,7 @@ public class UserController {
         return new ResponseEntity<>(userService.getUserSubscriptions(id), HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}/subscriptions/{sub_id}")
+    @DeleteMapping(value = "/{id}/subscriptions/{sub_id}", produces = "text/plain;charset=UTF-8")
     public ResponseEntity<String> removeSubscriptionFromUser(@UUID @PathVariable String id,
                                                              @UUID @PathVariable String sub_id) {
         return new ResponseEntity<>(userService.removeSubscriptionFromUser(id, sub_id), HttpStatus.OK);

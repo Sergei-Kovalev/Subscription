@@ -19,6 +19,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
@@ -51,7 +52,8 @@ public class User {
     )
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private Set<Subscription> subscriptions;
+    @Builder.Default
+    private Set<Subscription> subscriptions = new HashSet<>();
 
     public void addSubscription(Subscription subscription) {
         subscriptions.add(subscription);
