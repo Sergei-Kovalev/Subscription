@@ -39,5 +39,7 @@ public class Subscription {
     private String digitalServiceName;
 
     @ManyToMany(mappedBy = "subscriptions", fetch = FetchType.LAZY)
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Set<User> users = new HashSet<>();
 }

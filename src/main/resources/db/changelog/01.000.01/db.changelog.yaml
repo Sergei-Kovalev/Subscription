@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: subscriptions_data.sql
+      relativeToChangelogFile: true
+  - changeSet:
+      id: 01.000.01
+      author: Siarhei_Kavaleu
+      logicalFilePath: 01.000.01/db.changelog.yaml
+      changes:
+        - tagDatabase:
+            tag: 01.000.01
