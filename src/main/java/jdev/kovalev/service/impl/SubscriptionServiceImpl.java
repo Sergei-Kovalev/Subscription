@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SubscriptionServiceImpl implements SubscriptionService {
     private final SubscriptionRepository subscriptionRepository;
-    final SubscriptionMapper subscriptionMapper;
+    private final SubscriptionMapper subscriptionMapper;
 
     @Override
     public List<SubscriptionResponseDto> getTop() {
