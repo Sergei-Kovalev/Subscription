@@ -49,6 +49,8 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "subscription_id")
     )
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Set<Subscription> subscriptions;
 
     public void addSubscription(Subscription subscription) {

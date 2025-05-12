@@ -5,6 +5,9 @@ databaseChangeLog:
   - include:
       file: subscriptions.sql
       relativeToChangelogFile: true
+  - include:
+      file: user_subscription.sql
+      relativeToChangelogFile: true
   - changeSet:
       id: 01.000.00
       author: Siarhei_Kavaleu
